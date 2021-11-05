@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+.contentContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 400%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  white-space: normal;
+  -webkit-transition: left 1s ease-in-out;
+}
+
+.bg {
+  height: 100%;
+  width: 25%;
+  float: left
+}
+
+.bg.bg-1 {
+  background: url(../images/gallery2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg.bg-2 {
+  background: url(../images/gallery1.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg.bg-3 {
+  background: url(../images/gallery3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bg.bg-4 {
+  background: url(../images/gallery.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#navLinks {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#navLinks ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  margin-top: 6px;
+}
+
+#navLinks ul li {
+  float: left;
+  text-align: center;
+  margin: 10px;
+  list-style: none;
+  cursor: pointer;
+  background-color: none;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+#navLinks ul li:hover {
+  background-color: #eee;
+}
+
+#navLinks ul li.active {
+  background-color: #fff;
+  outline-width: 7px;
+}
+
+#navLinks ul li.active:hover {
+  background-color: #eee;
+}

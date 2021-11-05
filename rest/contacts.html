@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Contact Us</title>
+<link rel="shortcut icon" href="../images/iitrpr1.png" type="image/png">
+
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.css">
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<!-- external files for loader part -->
+<link rel="stylesheet" type="text/css" href="../css/round.css">
+<link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/vendor/modernizr-2.6.2.min.js"></script>
+<!-- external files for navbar part -->
+<link rel="stylesheet" type="text/css" href="../css/wave.css">
+<script type="text/javascript" src="../js/wave.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/navbar1.css">
+<script type="text/javascript" src="../js/navbar1.js"></script>
+<!-- external files for homebody part -->
+<link href="../homebody/css/bootstrap.min.css" rel="stylesheet">
+<link href="../homebody/css/small-business.css" rel="stylesheet">
+<script src="../homebody/js/jquery.js"></script>
+<script src="../homebody/js/bootstrap.min.js"></script>
+<!-- external files for news feed part -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/newscss.css">
+  <script src="../js/newsjava.js"></script>
+
+<!-- external files for contact box part -->
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="../css/contact.css">
+<script type="text/javascript" src="../js/contact.js"></script>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader1">
+</div>
+<div id="loader2">
+  <div class="hero">
+  </div>
+</div>
+
+<!-- navbar1 is here -->
+<div style="display:none;" id="navbar1" class="animate-bottom">
+   <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="small-logo-container">
+            <a class="small-logo" href="http://www.iitrpr.ac.in"><img src="../images/iitrpr.png" style="width: 15%; margin-top: 0; margin-right: 3% "></img>IIT Ropar</a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse" style="width: 49%; float: right;">
+          
+          <ul class="nav navbar-nav navbar-right" style="font-family:Helvetica, Arial, sans-serif; font-style: Arial; font-size:14px; ">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="boards.html">BOARDS @ IIT ROPAR</a></li>
+            <li><a href="responsibilities.html">RESPONSIBILITIES</a></li>
+            <li class="active"><a href="contacts.html">CONTACT</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container-fluid big-logo-row">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 big-logo-container">
+            <h1 class="big-logo">Student Affairs</h1>
+          </div><!--/.col-xs-12 -->
+        </div><!--/.row -->
+      </div><!--/.container -->
+    </div><!--/.container-fluid -->
+
+<!-- contact us part is here -->
+    <section id="hire">
+    <h1>Contact Us</h1>
+    
+    <form>
+        <div class="field name-box">
+            <input type="text" id="name" placeholder="Who Are You?"/>
+            <label for="name">Name</label>
+            <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field email-box">
+            <input type="text" id="email" placeholder="name@email.com"/>
+            <label for="email">Email</label>
+            <span class="ss-icon">check</span>
+        </div>
+
+        <div class="field msg-box">
+            <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+            <label for="msg">Msg</label>
+            <span class="ss-icon">check</span>
+        </div>
+
+        <input class="button" type="submit" value="Send" />
+  </form>
+</section>
+            <!-- Footer -->
+            <footer style="position:relative;bottom: -10px;">
+                <div class="row" style="background-color: #3ec3f6;">
+                    <div class="col-lg-12">
+                        <p style="color: white;">Copyright &copy; 2017 Ramesh Kasotiya</p>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    <!-- /.container -->
+        </div><!--/.col-xs-12 -->
+      </div><!--/.row -->
+    </div><!--/.container -->
+</div>
+
+
+<!-- script part is here -->
+<script>
+var myVar;
+var navbar1;
+function myFunction() {
+    myVar = setTimeout(showPage,0);
+    var navbarColor = "62,195,246";//color attr for rgba
+  var smallLogoHeight = $('.small-logo').height();
+  var bigLogoHeight = $('.big-logo').height();
+  
+  
+  var smallLogoEndPos = 0;
+  var smallSpeed = (smallLogoHeight / bigLogoHeight);
+  
+  var ySmall = ($(window).scrollTop() * smallSpeed); 
+  
+  var smallPadding = navbarHeight - ySmall;
+  if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
+  if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
+  if (smallPadding < 0) { smallPadding = 0; }
+  
+  $('.small-logo-container ').css({ "padding-top": smallPadding});
+  
+  var navOpacity = ySmall / smallLogoHeight; 
+  if  (navOpacity > 1) { navOpacity = 1; }
+  if (navOpacity < 0 ) { navOpacity = 0; }
+  var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
+  $('.navbar').css({"background-color": navBackColor});
+  
+  var shadowOpacity = navOpacity * 0.4;
+  if ( ySmall > 1) {
+    $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+  } else {
+    $('.navbar').css({"box-shadow": "none"});
+  }
+}
+
+function showPage() {
+  document.getElementById("loader1").style.display = "none";
+  document.getElementById("loader2").style.display = "none";
+  document.getElementById("navbar1").style.display = "block";
+}
+</script>
+
+</body>
+</html>
